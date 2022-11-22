@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS project_2;
-CREATE DATABASE project_2;
+DROP DATABASE IF EXISTS local_db;
+CREATE DATABASE local_db;
 
 USE project_2;
