@@ -1,3 +1,4 @@
 DROP DATABASE IF EXISTS local_db;
 CREATE DATABASE local_db;
 
+USE project_2;
