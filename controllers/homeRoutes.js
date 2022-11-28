@@ -1,11 +1,19 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
+//GET all Categories
 router.get('/', async (req, res) => {
   try {
+    const categoryData = await Category.findAll();
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+
+    // Return categories to homepage.handlebars template engine:
     res.render('homepage', {
-      logged_in: req.session.logged_in,
+      categories,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
@@ -17,14 +25,14 @@ router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
+      attributes: { exclude: ['password'] }
     });
 
     const user = userData.get({ plain: true });
 
     res.render('profile', {
       ...user,
-      logged_in: true,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);

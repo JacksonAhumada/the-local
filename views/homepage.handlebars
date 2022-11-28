@@ -4,18 +4,15 @@
     <li>
       <div class='collapsible-header'><i
           class='material-icons'
-        >filter_drama</i>My Lists</div>
+        >filter_drama</i>My Categories</div>
+      {{#each categories as |category|}}
       <div class='collapsible-body'>
-        <ul>
-          <li>
-            <a href='https://www.youtube.com/watch?v=Q7t4JOt-KH4'>Check this
-              out!</a>
-          </li>
-          <li>
-            <span>Lorem ipsum dolor sit amet.</span>
-          </li>
-        </ul>
+       <a href="/categories/{{category.id}}">
+          <header>{{category.category_name}}</header>
+          <span>{{category.description}}</span>
+        </a>
       </div>
+      {{/each}}
     </li>
 
   </ul>
