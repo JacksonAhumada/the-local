@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
-//GET all Categories
+//GET all Categories for Homepage
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll();

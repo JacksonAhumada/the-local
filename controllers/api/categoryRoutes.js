@@ -1,8 +1,5 @@
 const router = require('express').Router();
-const { Category } = require('../../models');
-
-
-
+const { Category, Item } = require('../../models');
 
 //GET one categories
 router.get('/:id', async (req, res) => {
@@ -16,7 +13,15 @@ router.get('/:id', async (req, res) => {
     }
 
     // Else Return Category Object
-    res.status(200).json(categoryData);
+    const categories = categoryData.map((category) =>
+      category.get({ plain: true })
+    );
+
+    // Return categories to handlebars template engine:
+    res.render('item', {
+      categories,
+      logged_in: req.session.logged_in
+    });
   } catch (error) {
     res.status(500).json(error);
   }
@@ -65,6 +70,25 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
+    // Else Return Product Object
+    res.status(200).json(categoryData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+//GET one Category with items:
+router.get('/items/:id', async (req, res) => {
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [{ model: Item }]
+    });
+
+    // Return Error Message if no product is found
+    if (!categoryData) {
+      res.status(404).json({ message: "That Category doesn't exist!" });
+      return;
+    }
     // Else Return Product Object
     res.status(200).json(categoryData);
   } catch (error) {

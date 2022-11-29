@@ -4,10 +4,10 @@
     <li>
       <div class='collapsible-header'><i
           class='material-icons'
-        >filter_drama</i>My Categories</div>
-      {{#each categories as |category|}}
-      {{> category-details}}
-      {{/each}}
+        >filter_drama</i>{{category.category_name}}</div>
+      {{#each category.items as |item|}}
+         {{> items-details}}
+       {{/each}}
     </li>
   </ul>
 </div>
