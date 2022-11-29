@@ -8,6 +8,15 @@
     "item_name": "Casa Bonita",
     "website": "www.casabonita.com",
     "category_id": 1
-  }
-  
+  },
+  {
+    "item_name": "Beckon",
+    "website": "www.beckon.com",
+    "category_id": 1
+  },
+  {
+    "item_name": "Tavernetta",
+    "website": "www.Tavernetta.com",
+    "category_id": 1
+  }  
 ]

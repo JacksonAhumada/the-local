@@ -40,19 +40,10 @@
     <li>
       <div class='collapsible-header'><i
           class='material-icons'
-        >filter_drama</i>My Lists</div>
-      <div class='collapsible-body'>
-        <ul>
-          <li>
-            <a href='https://www.youtube.com/watch?v=Q7t4JOt-KH4'>This is a link
-              to a city list.</a>
-          </li>
-          <li>
-            <span>This will be a link to a city list.</span>
-          </li>
-        </ul>
-      </div>
+        >filter_drama</i>My Categories</div>
+      {{#each categories as |category|}}
+      {{> category-details}}
+      {{/each}}
     </li>
-
   </ul>
 </div>
