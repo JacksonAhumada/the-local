@@ -3,7 +3,7 @@ const { User, Category } = require('../models');
 const withAuth = require('../utils/auth');
 
 //GET all Categories for Homepage
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const categoryData = await Category.findAll();
     const categories = categoryData.map((category) =>
