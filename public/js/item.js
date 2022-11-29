@@ -8,14 +8,18 @@ const newFormHandler = async (event) => {
   if (name && website && category_id) {
     const response = await fetch(`/api/items`, {
       method: 'POST',
-      body: JSON.stringify({ name, website, category_id }),
+      body: JSON.stringify({
+        item_name: name,
+        website: website,
+        category_id: category_id
+      }),
       headers: {
         'Content-Type': 'application/json'
       }
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/categories/1');
     } else {
       alert('Failed to create an Item');
     }
@@ -42,6 +46,5 @@ document
   .querySelector('.new-item-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.item-list')
-  .addEventListener('click', delButtonHandler);
+document.querySelector('.item-list');
+// .addEventListener('click', delButtonHandler);
