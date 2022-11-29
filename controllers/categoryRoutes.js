@@ -3,7 +3,7 @@ const { Category, Item } = require('../models');
 const withAuth = require('../utils/auth');
 
 //GET one Category with items:
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     // find one category by its `id` value
     const categoryData = await Category.findByPk(req.params.id, {
@@ -26,6 +26,6 @@ router.get('/:id', async (req, res) => {
   } catch (error) {
     res.status(500).json(error);
   }
-}); 
+});
 
 module.exports = router;
