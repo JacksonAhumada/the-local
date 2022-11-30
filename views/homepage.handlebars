@@ -4,10 +4,8 @@
     <li>
       <div class='collapsible-header'><i
           class='material-icons'
-        >filter_drama</i>My Categories</div>
-      {{#each categories as |category|}}
-      {{> category-details}}
-      {{/each}}
+        >add</i>Add a New Item</div>
+     {{> newItem-Form}}
     </li>
   </ul>
 </div>
@@ -17,8 +15,10 @@
     <li>
       <div class='collapsible-header'><i
           class='material-icons'
-        >filter_drama</i>Add a New Item</div>
-     {{> newItem-Form}}
+        >collections</i>My Categories</div>
+      {{#each categories as |category|}}
+      {{> category-details}}
+      {{/each}}
     </li>
   </ul>
 </div>
