@@ -1,13 +1,23 @@
 <div class='container'>
+  <h2>{{category.category_name}}</h2>
 
-  <ul class='collapsible'>
-    <li>
-      <div class='collapsible-header'><i
-          class='material-icons'
-        >filter_drama</i>{{category.category_name}}</div>
-      {{#each category.items as |item|}}
-         {{> items-details}}
-       {{/each}}
-    </li>
-  </ul>
+<div class='item-list'>
+    {{#each category.items as |item|}}
+        {{> items-details}}
+      {{/each}}
+<div class='divider'></div>
 </div>
+</div>
+  
+{{!-- New Item Form --}}
+    <div class='container'>
+    <ul class='collapsible'>
+    <li>
+      <div class='collapsible-header green lighten-2'
+    >Add new {{category.category_name}}
+    </div>
+    {{> newItem-Form}}
+    </li>
+       </div>
+       <script src='/js/item.js'></script>
+       

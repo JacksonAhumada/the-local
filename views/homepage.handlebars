@@ -1,24 +1,22 @@
 <div class='container'>
+ <h2>My Local Lists</h2>
 
-  <ul class='collapsible'>
-    <li>
-      <div class='collapsible-header'><i
-          class='material-icons'
-        >filter_drama</i>My Categories</div>
+<div class='category-list'>
+  
       {{#each categories as |category|}}
       {{> category-details}}
       {{/each}}
-    </li>
-  </ul>
 </div>
 <div class='container'>
 
-  <ul class='collapsible'>
+{{!-- New Item Form --}}
+    <div class='container'>
+    <ul class='collapsible'>
     <li>
-      <div class='collapsible-header'><i
-          class='material-icons'
-        >filter_drama</i>Add a New Item</div>
-     {{> newItem-Form}}
+      <div class='collapsible-header green lighten-2'
+    >Create a new Local list
+    </div>
+    {{> newCategory-Form}}
     </li>
-  </ul>
-</div>
+       </div>
+       <script src='/js/category.js'></script>

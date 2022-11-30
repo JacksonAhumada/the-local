@@ -1,17 +1,13 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#item_name').value.trim();
-  const website = document.querySelector('#website').value.trim();
-  const category_id = document.querySelector('#category_id').value.trim();
+  const name = document.querySelector('#category_name').value.trim();
 
-  if (name && website && category_id) {
-    const response = await fetch(`/api/items`, {
+  if (name) {
+    const response = await fetch(`/api/categories`, {
       method: 'POST',
       body: JSON.stringify({
-        item_name: name,
-        website: website,
-        category_id: category_id
+        category_name: name
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +26,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/items/${id}`, {
+    const response = await fetch(`/api/categories/${id}`, {
       method: 'DELETE'
     });
 
@@ -43,9 +39,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-item-form')
+  .querySelector('.new-category-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.item-list')
+  .querySelector('.category-list')
   .addEventListener('click', delButtonHandler);
