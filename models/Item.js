@@ -21,7 +21,10 @@ Item.init(
     },
     website: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        isUrl: true
+      }
     },
     category_id: {
       type: DataTypes.INTEGER,
