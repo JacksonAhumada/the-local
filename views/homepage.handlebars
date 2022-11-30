@@ -1,8 +1,8 @@
 <div class='container'>
- <h2>My Local Lists</h2>
+ <h2 class="white-text">My Local Lists</h2>
 
 
-<div class='category-list'>
+<div class='category-list white-text'>
   
       {{#each categories as |category|}}
       {{> category-details}}
@@ -16,8 +16,8 @@
     <ul class='collapsible'>
     <li>
 
-      <div class='collapsible-header green lighten-2'
-    >Create a new Local list
+      <div class='collapsible-header blue lighten-2 white-text'
+    ><i class="material-icons">add</i>Create a new Local list
     </div>
     {{> newCategory-Form}}
 
