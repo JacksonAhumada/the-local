@@ -1,6 +1,10 @@
-   <div class='collapsible-body'>
-       <a href="/categories/{{id}}">
-          <header>{{item_name}}</header>
-          <span>{{website}}</span>
-        </a>
-    </div>
+<div class='divider'></div>
+<div class='section'>
+  <h5>{{item_name}}</h5>
+  <p><a href='https://{{website}}' target='_blank'>{{website}}</a></p>
+  <p><button
+      class='btn btn-sm btn-danger red lighten-2'
+      data-id='{{id}}'
+    >REMOVE</button>
+  </p>
+</div>
