@@ -27,9 +27,7 @@ SO that we all can avoid tourist traps and experience what makes that city truly
 
 - [License](#license)
 
-- [Contributing](#contributing)
-
-- [Tests](#tests)
+- [Collaborators](#collaborators)
 
 - [Questions](#questions)
 
