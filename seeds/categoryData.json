@@ -1,15 +1,19 @@
 [
   {
-    "category_name": "Restaurants"
+    "category_name": "Restaurants",
+    "user_id": 1
   },
   {
-    "category_name": "Bars"
+    "category_name": "Bars",
+    "user_id": 1
   },
   {
-    "category_name": "Sites"
+    "category_name": "Sites",
+    "user_id": 1
   },
   {
-    "category_name": "Neighborhoods"
+    "category_name": "Neighborhoods",
+    "user_id": 1
   }
   
 ]

@@ -1,5 +1,42 @@
 const router = require('express').Router();
-const { Category, Item } = require('../../models');
+const { Category, Item, User } = require('../../models');
+
+//GET all Categories by Users
+router.get('/user', async (req, res) => {
+  try {
+    const categoryData = await User.findAll({
+      include: [{ model: Category }]
+    });
+
+    // Return Error Message if no product is found
+    if (!categoryData) {
+      res.status(404).json({ message: "That User doesn't exist!" });
+      return;
+    }
+    // Else Return Product Object
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+//GET all Categories by 1 User
+router.get('/user/:id', async (req, res) => {
+  try {
+    const categoryData = await User.findByPk(req.params.id, {
+      include: [{ model: Category }]
+    });
+
+    // Return Error Message if no product is found
+    if (!categoryData) {
+      res.status(404).json({ message: "That User doesn't exist!" });
+      return;
+    }
+    // Else Return Product Object
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //GET one categories
 router.get('/:id', async (req, res) => {
