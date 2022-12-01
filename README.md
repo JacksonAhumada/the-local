@@ -41,6 +41,14 @@ npm i
 
 ## Usage
 
+![Login](./assets/images/Login.png)
+
+![Profile](./assets/images/Profile.png)
+
+![Categories](./assets/images/Categories.png)
+
+![Items](./assets/images/Items.png)
+
 ## License
 
 This project is licensed under the MIT license.
