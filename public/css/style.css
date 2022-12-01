@@ -1,4 +1,27 @@
-.login_card {
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #0cbfcb #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0cbfcb;
+    border-radius: 10px;
+    
+  }
+
+.display_card {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   height: 740px;
@@ -17,9 +40,41 @@
 }
 
 .btn {
-  background-color: #0cbfcb;
+  background-color: #0cbfcb !important;
 }
 
 input {
   padding: 0 8 0 8 !important;
+}
+
+.trash_btn {
+  background:transparent;
+  color: white;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.collapsible_btn {
+  background-color:transparent!important;
+  
+}
+
+.scroll {
+  max-height: 740px;
+  overflow-y: scroll;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.logo {
+  padding: 0 0 0 15 !important;
+}
+
+.right_login {
+  padding: 0 15 0 0 !important;
+}
+.right_nav {
+  padding: 0 20 0 0 !important;
 }
