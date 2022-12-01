@@ -1,26 +1,33 @@
-<div class='container'>
- <h2 class="white-text">My Local Lists</h2>
+<div class='row'>
+  <div class="col s12 m4 offset-m4">
+    <div class="display_card scroll">
+      <div class="card-content white-text ">
+        <h2 class="center-align">My Local Lists</h2>
 
 
-<div class='category-list white-text'>
-  
-      {{#each categories as |category|}}
-      {{> category-details}}
-      {{/each}}
+        <div class='category-list white-text'>
+          
+              {{#each categories as |category|}}
+              {{> category-details}}
+              {{/each}}
 
-</div>
-<div class='container'>
+        </div>
 
-{{!-- New Item Form --}}
-    <div class='container'>
-    <ul class='collapsible'>
-    <li>
 
-      <div class='collapsible-header blue lighten-2 white-text'
-    ><i class="material-icons">add</i>Create a new Local list
-    </div>
-    {{> newCategory-Form}}
+        {{!-- New Item Form --}}
+        <div class='center-align collapsible_btn'>
+        <ul class='collapsible'>
+            <li>
 
-    </li>
+              <div class='collapsible-header collapsible_btn white-text'
+            ><i class="material-icons">add</i>Create a new Local list
+            </div>
+            {{> newCategory-Form}}
+
+            </li>
+        </ul>
        </div>
+    </div>
+  </div>
+</div>
        <script src='/js/category.js'></script>

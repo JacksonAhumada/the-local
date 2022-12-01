@@ -30,17 +30,17 @@
         <nav class="grey darken-4">
           
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">The Local</a>
+      <a href="/" class="brand-logo logo">The Local</a>
       {{#if logged_in}}
       
-      <ul class="right hide-on-med-and-down">
-        <li class="active"><a href='/'>My Local Lists</a></li>
-        <li class="active"><a href='/profile'>Profile</a></li>
+      <ul class="right hide-on-med-and-down right_nav">
+        <li class=""><a href='/'>My Local Lists</a></li>
+        <li class=""><a href='/profile'>Profile</a></li>
         <li><button class='waves-effect waves-light btn white-text' id='logout'>Logout</button></li>
       </ul>
         {{else}}
         <div class="nav-wrapper">
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down right_login">
         <li class="active"><a href='/login'>Login</a></li>
         </ul>
             {{/if}}
