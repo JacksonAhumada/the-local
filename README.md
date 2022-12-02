@@ -65,7 +65,7 @@ Kameron Lanier
 
 If you have any questions about the repository, please open an issue or contact us directly at:
 
-- jAhumada@gmail.com
+- jacksonahumada@gmail.com
 - JeremyFulbright@gmail.com
 - csara@gmail.com
 - kamsabeast@gmail.com
