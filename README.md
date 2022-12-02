@@ -41,6 +41,8 @@ npm i
 
 ## Usage
 
+- https://JacksonAhumada.github.io/the-local
+
 ![Login](./assets/images/Login.png)
 
 ![Profile](./assets/images/Profile.png)
