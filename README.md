@@ -27,9 +27,7 @@ SO that we all can avoid tourist traps and experience what makes that city truly
 
 - [License](#license)
 
-- [Contributing](#contributing)
-
-- [Tests](#tests)
+- [Collaborators](#collaborators)
 
 - [Questions](#questions)
 
@@ -42,6 +40,12 @@ npm i
 ```
 
 ## Usage
+
+- https://fathomless-island-66703.herokuapp.com/
+
+|      ![Login](./assets/images/Login.png)      | ![Profile](./assets/images/Profile.png) |
+| :-------------------------------------------: | :-------------------------------------: |
+| ![Categories](./assets/images/Categories.png) |   ![Items](./assets/images/Items.png)   |
 
 ## License
 
