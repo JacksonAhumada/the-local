@@ -1,22 +1,22 @@
 [
   {
     "item_name": "Sushi Den",
-    "website": "www.sushiden.com",
+    "website": "https://www.sushiden.net/",
     "category_id": 1
   },
   {
     "item_name": "Casa Bonita",
-    "website": "www.casabonita.com",
+    "website": "https://www.casabonitadenver.com/",
     "category_id": 1
   },
   {
     "item_name": "Beckon",
-    "website": "www.beckon.com",
+    "website": "https://beckon-denver.com/",
     "category_id": 1
   },
   {
     "item_name": "Tavernetta",
-    "website": "www.Tavernetta.com",
+    "website": "https://www.tavernettadenver.com/",
     "category_id": 1
   }  
 ]

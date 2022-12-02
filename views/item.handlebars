@@ -1,25 +1,32 @@
-<div class='container'>
-  <h2>{{category.category_name}}</h2>
+<div class='row'>
+  <div class="col s12 m4 offset-m4">
+    <div class="display_card scroll">
+      <div class='card-content white-text'>
+        <h2 class="center-align">{{category.category_name}}</h2>
 
-<div class='item-list'>
-    {{#each category.items as |item|}}
-        {{> items-details}}
-      {{/each}}
-<div class='divider'></div>
-</div>
-</div>
+        <div class='item-list white-text '>
+            {{#each category.items as |item|}}
+                {{> items-details}}
+              {{/each}}
+          <div class='divider'></div>
+        </div>
+
   
-{{!-- New Item Form --}}
-    <div class='container'>
-    <ul class='collapsible'>
-    <li>
+          {{!-- New Item Form --}}
+      <div class='center-align collapsible_btn'>
+        <ul class='collapsible'>
+          <li>
 
-      <div class='collapsible-header green lighten-2'
-    >Add new {{category.category_name}}
+              <div class='collapsible-header collapsible_btn white-text'
+            ><i class="material-icons">add</i>Add new {{category.category_name}}
+            </div>
+            {{> newItem-Form}}
+
+            </li>
+        </ul>
+      </div>
     </div>
-    {{> newItem-Form}}
-
-    </li>
-       </div>
+  </div>
+</div>
        <script src='/js/item.js'></script>
        
