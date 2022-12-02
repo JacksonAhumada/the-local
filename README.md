@@ -41,15 +41,11 @@ npm i
 
 ## Usage
 
-- https://JacksonAhumada.github.io/the-local
+- https://fathomless-island-66703.herokuapp.com/
 
-![Login](./assets/images/Login.png)
-
-![Profile](./assets/images/Profile.png)
-
-![Categories](./assets/images/Categories.png)
-
-![Items](./assets/images/Items.png)
+|      ![Login](./assets/images/Login.png)      | ![Profile](./assets/images/Profile.png) |
+| :-------------------------------------------: | :-------------------------------------: |
+| ![Categories](./assets/images/Categories.png) |   ![Items](./assets/images/Items.png)   |
 
 ## License
 
